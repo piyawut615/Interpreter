@@ -9,15 +9,9 @@ public class Main {
 		context.put("radius", sc.nextDouble());
 		Expression two = new Constant(2);
 		Expression pi = new  Constant(Math.PI);
-		
-		
 		Expression radius = new Variable("radius");
-		Expression powerRad = new Power(radius);
+		Expression powerRad = new Power(radius,two);
 		Expression powerRadPi = new Multiple(powerRad, pi);
-		
-		
-		
-		
 		Expression length = new Multiple(pi,radius);
 		Expression lengthRead = new Multiple(length, two);
 		double result = powerRadPi.evaluate(context);
@@ -26,3 +20,8 @@ public class Main {
 		System.out.println("Radius is "+context.get("radius")+" lebgth of triangle is "+resultL);
 	}
 }
+
+
+
+
+
